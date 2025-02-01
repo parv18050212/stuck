@@ -1,0 +1,102 @@
+/* Fullscreen center alignment */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right,#fc89a9, #c8a2c8 );
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    max-width: 90%;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff1e50;
+    transform: scale(1.05);
+}
+
+/* Hide elements */
+.hidden {
+    display: none;
+}
+
+/* Heart Shape Styling */
+pre {
+    font-size: 18px;
+    color: #5D3FD3;
+    text-align: center;
+}
+
+/* Text Styling */
+p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #9f69b0;
+}
+
+/* Text Typing Animation (Word-by-Word) */
+@keyframes blinkCursor {
+    50% { border-right-color: transparent; }
+}
+
+.typing {
+    display: inline-block;
+    border-right: 3px solid white; /* Simulates cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+
+    animation: blinkCursor 0.8s step-end infinite;
+}
+
+/* Message animation */
+/* Message animation */
+.message-line {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5D3FD3;
+    margin-top: 5px;
+}
+
+.message-line.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Typing effect */
+.typing {
+    display: inline-block;
+    border-right: 3px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blinkCursor 0.8s step-end infinite;
+}
+
+@keyframes blinkCursor {
+    50% { border-right-color: transparent; }
+}
+
